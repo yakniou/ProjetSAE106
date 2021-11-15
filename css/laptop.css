@@ -1,0 +1,638 @@
+/* Importation du chemin du dossier */
+@import 'variable.css';
+
+/* NavBar */
+.haut_de_page {
+    display: none;
+}
+
+nav {
+    background-color: var(--turquoise-light);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-nav-laptop);
+    font-size: var(--nav-bar-police-laptop);
+    height: var(--nav-laptop-height);
+}
+
+.nav-btn-container {
+    display: none;
+}
+
+.nav-liens-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#menu-deroulant-jeux:checked ~ .menu-deroulant-container {
+    height: auto;
+    padding: var(--menu-deroulant-translate-laptop);
+    border-top: var(--transparence) solid 1px;
+}
+
+.jeux-container .menu-deroulant-container {
+    background-color: var(--turquoise-light);
+    width: 190px;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: var(--nav-laptop-height);
+    transition: var(--nav-menu-der-transition);
+}
+
+.jeux-container .jeux-details:nth-child(2) {
+    margin: calc(var(--menu-deroulant-translate) / 2) 0;
+}
+
+nav .nav-liens-container .nav-lien {
+    margin-left: var(--margin-lien-nav);
+}
+
+#nav-btn-check, #menu-deroulant-jeux {
+    display: none;
+}
+
+nav a, .nav-lien {
+    text-decoration: none;
+    color: var(--bleu-ciel);
+}
+
+nav .nav-logo-container a {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+nav .jeux-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jeux-container label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.jeux-container .icon-caret {
+    margin-left: 15px;
+    width: 13px;
+    height: 6px;
+    background-color: var(--blanc);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    transition: var(--nav-menu-der-transition);
+}
+
+#menu-deroulant-jeux:checked ~ label > i.icon-caret {
+    transform: rotate(180deg);
+}
+/* Fin navbar */
+
+/* Page autre MMO */
+#mmo body{
+    text-size-adjust: 12cm;
+    font-family: Poppins, fantasy;
+    font-weight: normal;
+    color: #ffffff;
+    background-color:  #15202B;
+	margin:auto;
+	padding:auto;
+    max-width: 1700px;
+
+}
+
+#mmo section{
+    margin-top: 300px;
+    
+}
+
+#mmo h1{
+    text-size-adjust: 16px;
+    clear: both;
+    
+}
+
+#mmo article{
+    margin-top:auto ;
+    margin-bottom:auto;
+    max-width: 700px;
+    min-height: 40px;
+    min-width: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+    text-align: center;
+
+
+}
+
+#mmo #gauche{
+	width:50%;
+	float:left;	
+	margin:0;
+    margin-left: auto; 
+}
+
+#mmo #droite{
+	float:right;
+	width:50%;
+	margin:0;
+    margin-left: auto;   
+}
+
+#mmo img{
+    height: 250px;
+    width: 400px;  
+}
+#mmo .titre{
+    display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#mmo p{ 
+    padding: 5px 15px 5px 15px ;
+    margin: auto;
+}
+
+#mmo figure {
+    display: table;
+    padding: 10px;  
+}
+#mmo figcaption {
+    display: table-caption;
+    caption-side: top;
+}
+
+#mmo .c{
+    margin-bottom: 50px;
+}
+
+#mmo #lp{
+    margin-bottom: 70px;
+}
+
+#mmo #lpl{
+    margin-bottom: 30px;
+}
+/* Fin page autre MMO */
+
+/* Page WoW */
+body{
+    color:var(--blanc);
+}
+
+/* logo wow */
+#wow header.logo-wow img{
+    display: flex;
+    justify-content: center;
+    margin-top: var(--margin-laptop);
+    margin-left:auto;
+	margin-right:auto;
+    width: 45%;
+    height: auto;
+}
+
+/* Corps du site */
+#wow h1{
+    font-size: var(--size-laptop-titre);
+}
+
+#wow p{
+    font-size: var(--size-laptop);
+}
+
+#wow .kkk div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: var(--margin-laptop);
+}
+
+#wow div img {
+    margin: var(--margin-laptop) 0;
+    width: 100%;
+    height: auto;
+}
+
+/* Fin page WoW*/
+
+/* Page Dofus */
+.dofus {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+	margin-left:auto;
+	margin-right:auto; 
+}
+.IntroDofus {
+    margin: var(--margin-laptop);
+    font-size: var(--size-laptop);
+}
+.DofusClasse {
+    margin: var(--margin-laptop);
+    font-size: var(--size-laptop);
+}
+
+.dofusperso {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    height: auto;
+}
+
+.adofusobjets {
+    display:flex;
+    justify-content: center;
+}
+
+.objets {
+    display: flex;
+    justify-content: center;
+    margin: var(--margin-ordi);
+}
+
+.objetstxt {
+    margin: auto;
+}
+
+.graphiqueobjets {
+    justify-content: center;
+    margin: var(--margin-laptop);
+    width: 50vw;
+    height: auto;
+}
+
+.container-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+}
+
+.box-content {
+    width: 45vw;
+    height: 100%;
+}
+
+.swiper-container {
+    overflow: hidden;
+    width: var(--widthSlider);
+    height: 100%;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row; 
+    box-sizing: content-box;/* cf developpez.net */
+}
+
+.swiper-wrapper-image {
+    animation: slide-image 15s infinite;
+}
+.swiper-wrapper-text {
+    animation: slide-text 15s infinite;
+}
+
+.swiper-slide {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Permet de ne pas rétrecir une div et de laisser la tailler que lui aura determiné */
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide-image img {
+    width: 80%;
+    height: auto;
+}
+
+@keyframes slide-image {
+    0% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(0);
+    } 
+    50% {
+        transform: translateX(var(--widthTranslate));
+    }
+    90% {
+        transform: translateX(var(--widthTranslate));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-text {
+    0% {
+        transform: translateX(var(--widthTranslate));
+    }
+    40% {
+        transform: translateX(var(--widthTranslate));
+    } 
+    50% {
+        transform: translateX(0);
+    }
+    90% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(var(--widthTranslate));
+    }
+}
+
+#slide-1-text {
+    font-size: var(--size-laptop);
+}
+#slide-2-text {
+    font-size: var(--size-laptop);
+}
+
+.musiquesvariété {
+    font-size: var(--size-laptop);
+    margin: var(--margin-laptop);
+}
+
+.attention {
+    display: flex;
+    justify-content: center;
+    font-size: var(--size-laptop);
+}
+
+.container-audio-dofus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: var(--size-laptop);
+}
+
+.container-audio-dofus .audio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--size-laptop);
+}
+
+.audiotxt {
+    margin: var(--margin-laptop);
+}
+
+.audioretro { 
+    display: block;
+    margin: var(--margin-laptop);
+}
+
+.attention {
+    margin: var(--margin-laptop);
+}
+
+.humour {
+    margin: var(--margin-laptop);
+    font-size: var(--size-laptop);
+}
+
+.humourtxt {
+    margin: var(--margin-laptop);
+    font-size: var(--size-laptop);
+}
+
+.marrant {
+    display: flex;
+    justify-content: center;
+}
+
+.quetemarrant {
+    margin: var(--margin-laptop);
+    height: 20vw;
+}
+
+.photomarrant {
+    margin: var(--margin-laptop);
+    height: 20vw;
+}
+
+.nom {
+    text-align: center;
+    font-size: var(--size-laptop-titre);
+}
+
+.hrefmarrant {
+    display:flex;
+    justify-content: center;
+}
+
+.fini {
+    margin: var(--margin-laptop);
+    font-size: var(--size-laptop);
+}
+
+/*fin page dofus */
+
+.Slogant {
+    font-size: var(--size-laptop-slogant);
+    margin: var(--margin-laptop-accueil);
+}
+
+.accrocheacceuil {
+    font-size: var(--size-laptop-accroche);
+    margin: var(--margin-laptop-accroche);
+}
+
+.imgaccueil {
+    display: flex;
+    justify-content: center;
+    margin-left:auto;
+    margin-right:auto;
+    width: 70%;
+    height: auto;
+}
+/* Fin page Dofus */
+
+/* Page Tencent */
+
+#tencent body {
+    font-size: var(--size-laptop);
+}
+#tencent .logotencent img {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--margin-laptop);
+    margin-left:auto;
+	margin-right:auto;
+    width: 20%;
+    height: auto;
+}
+
+#tencent .sommaire{
+    display: flex;
+    margin: var(--margin-laptop);
+    text-align: center;
+}
+
+#tencent .sommaire ul li a{
+    text-decoration: none;
+    color: var(--blanc);
+
+}
+
+#tencent .classement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--margin-laptop);
+}
+
+#tencent .statista {
+    text-align: center;
+}
+
+#tencent .statista a {
+    text-decoration: none;
+    color: var(--blanc);
+}
+
+#tencent h1 {
+    text-align: center;
+    margin: var(--margin-laptop);
+}
+#tencent h2 {
+    text-align: center;
+    margin: var(--margin-laptop);
+}
+
+
+#tencent p {
+    text-align: center;
+    margin: var(--margin-laptop);
+}
+
+#tencent .poli li {
+    display: flex;
+    justify-content: center;
+
+}
+
+#tencent .fi {
+    color: var(--blanc);
+    text-decoration: none;
+}
+/* Fin page Tencent */
+
+/* Page contact */
+#ctct body {
+    font-size: var(--size-laptop-contact);
+}
+
+#ctct .contact {
+    display: flex;
+    justify-content: center;
+    margin: var(--margin-laptop);
+    font-size: var(--size-laptop-titre-contact);
+}
+
+#ctct .formall {
+
+    display: flex;
+    justify-content: center;
+    margin: var(--margin-laptop);
+}
+
+#ctct form {
+    border:black 2px solid;
+    font-size: var(--size-laptop-contact);
+}
+#ctct .form1 {
+    margin: var(--margin-laptop);
+    text-align: center;
+}
+
+#ctct .form2 {
+    margin: var(--margin-laptop);
+    text-align: center;
+}
+
+#ctct .form3 {
+    margin: var(--margin-laptop);
+    text-align: center;
+}
+
+#ctct .form1 input {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: var(--transparence);
+    border: none;
+    color: var(--blanc);
+}
+
+#ctct .form2 input {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: var(--transparence);
+    border: none;
+    color: var(--blanc);
+}
+
+#ctct .form3 input {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: var(--transparence);
+    border: none;
+    color: var(--blanc);
+}
+
+#ctct .envoyer {
+    display: flex;
+    justify-content: center;
+    margin: var(--margin-laptop) auto;
+    background-color: var(--turquoise-light);
+    color: var(--blanc);
+    border: none;
+    font-size: var(--size-laptop-contact);
+    padding: 0 10px;
+}
+
+#ctct .logoall{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ctct .logotxt {
+    text-align: center;
+}
+
+#ctct .logoréseaux {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: auto;
+    margin: var(--margin-laptop);
+    align-items: center;
+}
+
+/* Fin page contact */

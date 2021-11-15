@@ -1,0 +1,86 @@
+:root {
+    /* Variables couleurs */
+    --turquoise-light: #203441;
+    --turquoise-dark: #15202b;
+    --transparence: #a2a2a298;
+    --blanc: #fff;
+    --bleu-ciel: #e0ebef;
+    --bleu-divers: #325896;
+    --noir: #000;
+
+    /* Translation pour le slider, les deux valeurs doivent l'exacte opposé l'une de l'autre */
+    --widthSlider: 100%;
+    --widthTranslate: -100%;
+
+    /* taille de la police */
+    --nav-bar-police: 30px;
+    --nav-bar-police-laptop: 20px;
+    --size-ordi: 14px;
+    --size-laptop: 13px;
+    --size-mobile: 12px;
+    --size-ordi-titre: 18px;
+    --size-laptop-titre: 17px;
+    --size-mobile-titre: 16px;
+    --size-ordi-slogant: 35px;
+    --size-ordi-accroche: 20px;
+    --size-laptop-slogant: 25px;
+    --size-laptop-accroche: 18px;
+    --size-mobile-slogant: 15px;
+    --size-mobile-accroche: 17px;
+    --size-ordi-contact: 30px;
+    --size-ordi-titre-contact: 40px;
+    --size-laptop-contact: 25px;
+    --size-laptop-titre-contact: 30px;
+    --size-mobile-contact: 20px;
+    --size-mobile-titre-contact: 25px;
+
+    /* padding et margin */
+
+    --padding-nav: 30px 70px;
+    --padding-nav-laptop: 20px 50px;
+    --padding-nav-mobile: 20px;
+    --margin-lien-nav: 50px;
+    --margin-ordi: 30px;
+    --margin-laptop: 25px;
+    --margin-mobile: 20px;
+    --margin-ordi-accueil: 50px;
+    --margin-ordi-accroche: 60px;
+    --margin-laptop-accueil: 40px;
+    --margin-laptop-accroche: 50px;
+    --margin-mobile-accueil: 30px;
+    --margin-mobile-accroche: 40px;
+
+    /*menu deroulant padding et margin */
+    --menu-deroulant-translate: 30px;
+    --menu-deroulant-translate-laptop: 20px;
+    --menu-deroulant-translate-mobile: 40px;
+
+    /* width et height */
+    --nav-mobile-height: 70px;
+    --nav-ordi-height: 105px;
+    --nav-laptop-height: 90px;
+
+    /* transisiton */
+    --nav-transition-burger: all 0.25s linear;
+    --nav-menu-der-transition: all 0.1s linear;
+}
+
+
+/* Initialisation des marges internes et externes */
+* {
+    text-align: justify;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--turquoise-dark);
+}

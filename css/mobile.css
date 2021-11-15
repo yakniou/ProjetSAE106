@@ -1,0 +1,659 @@
+@import 'variable.css';
+
+.haut_de_page { 
+    z-index: 50;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+/* Navbar */
+nav {
+    height: var(--nav-mobile-height);
+    padding: var(--padding-nav-mobile);
+    background-color: var(--turquoise-light);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav #nav-btn-check:checked ~ .nav-liens-container {
+    height: calc(100vh - var(--nav-mobile-height));
+}
+
+nav .nav-liens-container {
+    background-color: var(--turquoise-light);
+    position: fixed;
+    /* Permet de mettre le container des liens au premier plan */
+    z-index: 99;
+    left: 0;
+    top: var(--nav-mobile-height);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: var(--nav-transition-burger);
+}
+
+nav label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav label .ligne {
+    background-color: var(--bleu-ciel);
+    width: 25px;
+    height: 2px;
+    margin: 3px;
+    transition: var(--nav-transition-burger);
+}
+
+nav #nav-btn-check:checked ~ .nav-btn-container > label > .ligne {
+    transform-origin: center;
+}
+
+nav #nav-btn-check:checked ~ .nav-btn-container > label > .ligne-1 {
+    transform: translateY(8px) rotate(45deg);
+    -webkit-transform: translateY(8px) rotate(45deg);
+    -moz-transform: translateY(8px) rotate(45deg);
+    -ms-transform: translateY(8px) rotate(45deg);
+    -o-transform: translateY(8px) rotate(45deg);
+}
+
+nav #nav-btn-check:checked ~ .nav-btn-container > label > .ligne-2 {
+    opacity: 0;
+}
+
+nav #nav-btn-check:checked ~ .nav-btn-container > label > .ligne-3 {
+    transform: translateY(-8px) rotate(-45deg);
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    -moz-transform: translateY(-8px) rotate(-45deg);
+    -ms-transform: translateY(-8px) rotate(-45deg);
+    -o-transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-space {
+    margin-bottom: 80px;
+}
+
+.jeux-container {
+    position: relative;
+}
+
+#menu-deroulant-jeux:checked ~ .menu-deroulant-container {
+    height: 50px;
+    border-top: var(--transparence) solid 0.5px;
+    border-bottom: var(--transparence) solid 0.5px;
+}
+
+.jeux-container .menu-deroulant-container {
+    background-color: var(--turquoise-light);
+    width: 250px;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: var(--menu-deroulant-translate-mobile);
+    transition: var(--nav-menu-der-transition);
+}
+
+.jeux-container .jeux-details:nth-child(2) {
+    margin: 0 calc(var(--menu-deroulant-translate-mobile) / 2);
+}
+
+
+#nav-btn-check, #menu-deroulant-jeux {
+    display: none;
+}
+
+nav a, .nav-lien {
+    text-decoration: none;
+    color: var(--bleu-ciel);
+}
+
+nav .nav-logo-container a {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+nav .jeux-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jeux-container label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.jeux-container .icon-caret {
+    margin-left: 15px;
+    width: 13px;
+    height: 6px;
+    background-color: var(--blanc);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    transition: var(--nav-menu-der-transition);
+}
+
+#menu-deroulant-jeux:checked ~ label > i.icon-caret {
+    transform: rotate(180deg);
+}
+
+/* Fin navbar */
+body {
+    color: var(--blanc);
+}
+
+/* Accueil */
+.Slogant {
+    font-size: var(--size-mobile-slogant);
+    margin: var(--margin-mobile-accueil);
+}
+
+.accrocheacceuil {
+    font-size: var(--size-mobile-accroche);
+    margin: var(--margin-mobile-accroche);
+}
+
+.imgaccueil {
+    display: flex;
+    justify-content: center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 50px;
+    width: 80%;
+    height: auto;
+}
+/* Accueil */
+
+/* Page autre MMO */
+
+#mmo body{
+    text-size-adjust: 10px;
+    font-family: Poppins, fantasy;
+    font-weight: normal;
+    color: #ffffff;
+    background-color:  #15202B;
+	margin:auto;
+	padding:auto;
+    max-width: 750px;
+
+}
+
+#mmo section{
+    margin-top: 30px;
+}
+
+#mmo h1{
+    text-size-adjust: 14px;
+    clear: both;
+	text-align:center;
+    
+}
+
+#mmo article{
+    margin: auto 10px auto 10px;
+	text-align:center;
+}
+
+
+#mmo img{
+    display:block;
+	margin-left:auto;
+	margin-right:auto;
+	max-width: 100%;
+	min-width:10%;
+}
+
+
+#mmo .titre{
+    display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#mmo figure {
+  display: table;
+
+}
+#mmo figcaption {
+  display: table-caption;
+  caption-side: top;
+  margin-top: 30px;
+
+}
+
+
+@media screen and (min-width: 750px) {
+	@import "Laptop.css";
+}
+@media screen and (min-width: 1100px) {
+	@import "style.css";
+}
+
+
+
+/* Fin page autre MMO */
+/* Page WoW */
+/* logo wow */
+#wow header.logo-wow img{
+    display: flex;
+    justify-content: center;
+    margin-top: var(--margin-mobile);
+    margin-left:auto;
+	margin-right:auto;
+    width: 50%;
+    height: auto;
+}
+
+/* Corps du site */
+#wow h1{
+    font-size: var(--size-mobile-titre);
+}
+
+#wow p{
+    font-size: var(--size-mobile);
+}
+
+#wow .kkk div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: var(--margin-mobile);
+}
+
+#wow div img {
+    margin: var(--margin-mobile) 0;
+    width: 100%;
+    height: auto;
+}
+/* Fin page WoW */
+/* Page Dofus */
+.container-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+}
+
+.box-content {
+    width: 90vw;
+    height: 100%;
+}
+
+.swiper-container {
+    overflow: hidden;
+    width: var(--widthSlider);
+    height: 100%;
+}
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row; 
+    box-sizing: content-box;/* cf developpez.net */
+}
+
+.swiper-wrapper-image {
+    animation: slide-image 15s infinite;
+}
+
+.swiper-wrapper-text {
+    animation: slide-text 15s infinite;
+}
+
+.swiper-slide {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Permet de ne pas rétrecir une div et de laisser la tailler que lui aura determiné */
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes slide-image {
+    0% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(0);
+    } 
+    50% {
+        transform: translateX(var(--widthTranslate));
+    }
+    90% {
+        transform: translateX(var(--widthTranslate));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-text {
+    0% {
+        transform: translateX(var(--widthTranslate));
+    }
+    40% {
+        transform: translateX(var(--widthTranslate));
+    } 
+    50% {
+        transform: translateX(0);
+    }
+    90% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(var(--widthTranslate));
+    }
+}
+
+#slide-1-text {
+    font-size: var(--size-mobile);
+}
+
+#slide-2-text {
+    font-size: var(--size-mobile);
+}
+
+.musiquesvariété {
+    font-size: var(--size-mobile);
+    margin: var(--margin-mobile);
+}
+
+body {
+    font-size: var(--size-mobile);
+}
+
+.dofus{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+	margin-left:auto;
+	margin-right:auto; 
+    margin-bottom: var(--margin-mobile);
+}
+
+.IntroDofus {
+    margin: var(--margin-mobile);
+
+}
+
+.DofusClasse {
+    margin:  var(--margin-ordi);
+    margin-left: var(--margin-mobile);
+}
+
+.dofusperso {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+    height: auto;
+}
+
+.objets {
+    flex-wrap: wrap;
+    margin: var(--margin-mobile);
+}
+
+.graphiqueobjets{
+    margin-top: var(--margin-mobile);
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide-image img {
+    width: 90%;
+    height: auto;
+}
+
+.attention {
+    display: flex;
+    justify-content: center;
+    margin: var(--margin-mobile);
+    font-size: var(--size-mobile);
+}
+
+
+.container-audio-dofus .audio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.audioretro { 
+    display: block;
+    width: 100%;
+    margin: var(--margin-mobile);
+    font-size: var(--size-mobile);
+}
+
+audio {
+    transform: scale(0.7);
+}
+
+.audiotxt {
+    font-size: var(--size-mobile);
+    margin: var(--margin-mobile);
+}
+.humour {
+    margin: var(--margin-mobile);
+    font-size: var(--size-mobile);
+}
+
+.humourtxt {
+    margin: var(--margin-mobile);
+    font-size: var(--size-mobile);
+}
+
+.marrant {
+    display: flex;
+    justify-content: center;
+}
+
+.quetemarrant {
+    margin: var(--margin-mobile);
+    height: 25vw;
+}
+
+.photomarrant {
+    margin: var(--margin-mobile);
+    height: 25vw;
+}
+
+.nom {
+    text-align: center;
+    font-size: var(--size-mobile-titre);
+}
+
+.fini {
+    margin: var(--margin-mobile);
+    font-size: var(--size-mobile);
+}
+/* Fin page dofus */
+
+
+/* Page Tencent */
+#tencent body {
+    font-size: var(--size-mobile);
+}
+#tencent .logotencent img {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--margin-mobile);
+    margin-left:auto;
+	margin-right:auto;
+    width: 20%;
+    height: auto;
+}
+
+#tencent .sommaire{
+    display: flex;
+    margin: var(--margin-mobile);
+    text-align: center;
+}
+
+#tencent .sommaire ul li a{
+    text-decoration: none;
+    color: var(--blanc);
+}
+
+#tencent .classement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--margin-mobile);
+}
+
+#tencent .statista {
+    text-align: center;
+}
+
+#tencent .statista a {
+    text-decoration: none;
+    color: var(--blanc);
+}
+
+#tencent h1 {
+    text-align: center;
+    margin: var(--margin-mobile);
+}
+#tencent h2 {
+    text-align: center;
+    margin: var(--margin-mobile);
+}
+
+
+#tencent p {
+    text-align: center;
+    margin: var(--margin-mobile);
+}
+
+#tencent .poli li {
+    display: flex;
+    justify-content: center;
+
+}
+
+#tencent .fi {
+    color: var(--blanc);
+    text-decoration: none;
+}
+
+#tencent .imagetencent {
+    width: auto;
+    height: auto;
+}
+/* Fin page Tencent */
+
+/* Page contact */
+#ctct body {
+    font-size: var(--size-mobile-contact);
+}
+
+#ctct .contact {
+    display: flex;
+    justify-content: center;
+    margin: var(--margin-mobile);
+    font-size: var(--size-mobile-titre-contact);
+}
+
+#ctct .formall {
+
+    display: flex;
+    justify-content: center;
+    margin: var(--margin-mobile);
+}
+
+#ctct form {
+    border: var(--noir) 2px solid;
+    font-size: var(--size-mobile-contact);
+}
+#ctct .form1 {
+    margin: var(--margin-mobile);
+    text-align: center;
+}
+
+#ctct .form2 {
+    margin: var(--margin-mobile);
+    text-align: center;
+}
+
+#ctct .form3 {
+    margin: var(--margin-mobile);
+    text-align: center;
+}
+
+#ctct .form1 input {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: var(--transparence);
+    border: none;
+    color: var(--blanc);
+}
+
+#ctct .form2 input {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: var(--transparence);
+    border: none;
+    color: var(--blanc);
+}
+
+#ctct .form3 input {
+    display: block;
+    width: 100%;
+    height: auto;  
+    background-color: var(--transparence);
+    border: none;
+    color: var(--blanc);
+}
+
+#ctct .envoyer {
+    display: flex;
+    justify-content: center;
+    margin: var(--margin-mobile) auto;
+    background-color: var(--turquoise-light);
+    color: var(--blanc);
+    border: none;
+    font-size: var(--size-mobile-contact);
+    padding: 0 10px;
+}
+#ctct .logoall{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#ctct .logotxt {
+    display: none;
+}
+
+#ctct .logoréseaux {
+    width: 50%;
+    height: auto;
+    margin: var(--margin-mobile);
+}
+/* Fin page contact */
